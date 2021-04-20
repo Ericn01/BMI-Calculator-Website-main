@@ -1,12 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
-
+*{
+    margin: 0;
+    padding: 0;
+}
 :root{
-    --main-bg-color: #ffcdb2;
+    --main-bg-color: #7c203a;
+    --header-color: #feff89;
+    --subheader-color: #ff9f68;
     --main-txt-font: 'Barlow Condensed';
-    --main-txt-color: #b5838d; 
-    --highlights-color: #6d6875;
+    --main-txt-color: white; 
+    --highlights-color: #e2f3f5;
     --extra-color:#ffb4a2;
 }
 body{
+    font-family: var(--main-txt-font);
+    font-size: 1.2em;
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-color);
+}
 
+.grid-wrapper{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 1fr;
+}
+h3{
+    font-size: 2em;
+}
+header h1{ 
+text-shadow: 2px 2px 2px black;
+   color: var(--header-color);
+   font-size: 5em;
+   margin-left: 20px;
+}
+table{
+    border-collapse: collapse;
+
+    width: 100%;
+    margin: 10px;
+}
+
+table th{
+    font-size: 1.3rem;
+}
+h3{
+    color: var(--subheader-color)
 }
