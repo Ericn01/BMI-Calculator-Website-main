@@ -6,7 +6,7 @@
 :root{
     --main-bg-color: #7c203a;
     --header-color: #feff89;
-    --alternate-subheader-color: #1f4287;
+    --alternate-subheader-color: #e67a7a;
     --subheader-color: hsl(22, 100%, 70%);
     --main-txt-font: 'Barlow Condensed';
     --main-txt-color: white; 
@@ -14,10 +14,21 @@
     --extra-color:#ffb4a2;
 }
 body{
+    box-sizing: border-box;
     font-family: var(--main-txt-font);
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: var(--main-txt-color);
     background-color: var(--main-bg-color);
+}
+.image-align{
+    text-align: center;
+}
+img{
+    margin-top: 30px;
+    text-align: center;
+    width: 60%;
+    max-width: 500px;
+    border: 2px solid black;
 }
 .grid-wrapper{
     margin: 20px;
@@ -41,7 +52,6 @@ body{
     color: red;
 }
 table td{
-    border-bottom: 1px solid red;
     padding: 10px;
 }
 
@@ -52,7 +62,10 @@ section{
     padding: 10px;
     background-color: var(--subheader-color);
 }
-
+table td, th, tr{
+    border: 1px solid black;
+    text-align: center;
+}
 .form-wrapper{
     color: black;
     background-color:var(--header-color);
@@ -64,21 +77,26 @@ form input{
     border: none;
     box-shadow: 1px 1px 2px black;  
 }
-
+.r1{
+    background-color:hsl(22, 100%, 60%);
+}
 form div{
     margin: 30px 0 20px 0px; 
 }
 form label{
     margin-right: 10px;
 }
+input[type='radio']{
+    box-shadow: none;
+}
 h3{
     color: var(--alternate-subheader-color);
     text-shadow: 1px 1px 1px black;
-    font-size: 2em;
-    border-bottom: 1px solid black;
+    font-size: 2.5em;
+    border-bottom: 1px solid orange;
 }
 header h1{ 
-text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px black;
    color: var(--header-color);
    font-size: 5em;
    margin-left: 20px;
