@@ -12,8 +12,10 @@
     <title>BMI Calculator</title>
     <!-- Linking the required files to our page -->
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
+    
     <header>
         <div class="top-header">
             <h1>
@@ -32,10 +34,48 @@
                 <p> Body mass index, commonly reffered to as BMI is value that is derived from the weight of an individual divided by their height squared. It is expressed in units of kg/m&#178;. While this metric <a href="https://en.wikipedia.org/wiki/Body_mass_index#Limitationstends"> tends to be flawed </a> for individuals with a significant amount of muscle mass as opposed to fat, it is an adequate measure for most of the population. Based on an individuals's results, they will either be considered underweight, normal weight, overweight, or obese. </p>
             </section>
             <section class="form-wrapper">
-                <h3> Enter Your Information </h3>
-                <form>
-                    H1lo
+                <h3> Enter Your Information (All fields are required) </h3>
+                <form name="bmi-form" action="javascript:handleFormInputs()">
+                    <div>
+                        <label for="fullname"> Full Name<span class="redstar">* </span> </label>
+                        <input type="text" id="fullname" name="fullname" placeholder="John Smith" maxlength="35" required>
+                    </div>
+                    <div>
+                        Biological sex<span class="redstar">*</span> 
+                        <br>
+                        <input type="radio" id="male" name="sex" required>
+                        <label for="male"> Male </label>
+                        <input type="radio" id="female" name="sex">
+                        <label for="female"> Female </label>
+                    </div>
+                    <div> 
+                        <label for="weight"> Weigth (kg)<span class="redstar">*</span></label>
+                        <input type="number" id="weight" name="weight" max="500" min="25" placeholder="85" required>
+                    </div>
+                    <div>
+                        <label for="height"> Heigth (m)<span class="redstar">*</span> </label>
+                        <input type="number" id="height" name="height" max="2.50" min="0.5" placeholder="1.80" step="0.01" required>
+                    </div>
+                    <div class="input-buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </div>
                 </form>
+                <h4> Your BMI: <script type="text/javascript">
+                    function handleFormInputs(){
+                        var userSexInput = null;
+                        var name = document.getElementById('fullname').value;
+                        var height = parseFloat(document.getElementById('height').value, 10);
+                        var weight = parseFloat(document.getElementById('weight').value, 10);
+                        var bmi = weight / Math.pow(height, 2);
+                        
+                        if (name === undefined || height === undefined || weight === undefined){
+                            console.log('Nothing selected');
+                        }
+                        
+                        document.innerHTML = "<h4> [" + userSexInput + "]" + name + " has a BMI of " + Math.round(bmi, 2) + " </h4>"
+                    }
+                </script></h4>
             </section>
             <section class="table-container">
                 <h3> BMI Information </h3>
