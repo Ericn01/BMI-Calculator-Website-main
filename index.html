@@ -30,7 +30,7 @@
     <main>
         <div class="grid-wrapper">
             <section class="bmi-explanation">
-                <h3> What is BMI? </h3>
+                <h3> What is the BMI? </h3>
                 <p> Body mass index, commonly reffered to as BMI is value that is derived from the weight of an individual divided by their height squared. It is expressed in units of kg/m&#178;. While this metric <a href="https://en.wikipedia.org/wiki/Body_mass_index#Limitationstends"> tends to be flawed </a> for individuals with a significant amount of muscle mass as opposed to fat, it is an adequate measure for most of the population. Based on an individuals's results, they will either be considered underweight, normal weight, overweight, or obese. </p>
             </section>
             <section class="form-wrapper">
@@ -61,19 +61,40 @@
                         <input type="reset" value="Clear">
                     </div>
                 </form>
-                <h4> Your BMI: <script type="text/javascript">
+                <div id="bmi-result"></div> <script type="text/javascript">
+                    
+                    /**
+                     * This function is very long and should be broken up into multiple pieces 
+                     * */
                     function handleFormInputs(){
-                        var userSexInput = null;
+                        // Constants 
+                        var UNDERWEIGHT =  18.5;
+                        var NORMAL = 24.9;
+                        var OVERWEIGHT = 29.9; 
+
+                        // 
                         var name = document.getElementById('fullname').value;
                         var height = parseFloat(document.getElementById('height').value, 10);
                         var weight = parseFloat(document.getElementById('weight').value, 10);
                         var bmi = weight / Math.pow(height, 2);
                         
-                        if (name === undefined || height === undefined || weight === undefined){
-                            console.log('Nothing selected');
+                        var bmiCondition = null;
+
+                        if (bmi < UNDERWEIGHT){
+                            bmiCondition = "Underweight";
                         }
-                        
-                        document.innerHTML = "<h4> [" + userSexInput + "]" + name + " has a BMI of " + Math.round(bmi, 2) + " </h4>"
+                        else if (bmi > UNDERWEIGHT && bmi <= NORMAL) {
+                            bmiCondition = "Normal";
+                        }
+                        else if (bmi > NORMAL && bmi <= OVERWEIGHT){
+                            bmiCondition = "Overweight"
+                        }
+                        else{
+                            bmiCondition = "Obese";
+                        }
+
+
+                        document.getElementById("bmi-result").innerHTML += "<h4> " + name + " has a BMI of <i> " + bmi.toFixed(2) + " </i> - This is considered " + bmiCondition + "</h4> <br>";
                     }
                 </script></h4>
             </section>
