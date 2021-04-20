@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Basic meta tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bmi, health, calculator, body mass index">
+    <meta name="description" content="A simple calculator that takes certain user inputs such as height and weight and returns their bmi on a results page."></meta>
+    <meta name="author" content="Eric Nielsen">
+
+    <title>BMI Calculator</title>
+    <!-- Linking the required files to our page -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <h1>
+                The Simple BMI Calculator
+            </h1>
+            <nav>
+                More resources.
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <div class="grid-wrapper">
+            <section class="bmi-explanation">
+                <h3> What is BMI? </h3>
+                <p> Body mass index, commonly reffered to as BMI is value that is derived from the weight of an individual divided by their height squared. It is expressed in units of kg/m&#178;. While this metric <a href="https://en.wikipedia.org/wiki/Body_mass_index#Limitationstends"> tends to be flawed </a> for individuals with a significant amount of muscle mass as opposed to fat, it is an adequate measure for most of the population. Based on an individuals's results, they will either be considered underweight, normal weight, overweight, or obese. </p>
+            </section>
+            <section class="form-wrapper">
+
+            </section>
+            <section>
+                <h3> BMI Information </h3>
+                <p> Here's some information related to an individual's BMI. Use the results you've received above to gauge where you stand on the chart. </p>
+                <table class="info-table">
+                    <thead>
+                        <tr rowspan="3">
+                            <th> Age </th>
+                        </tr>
+                        
+                        <tr colspan="9"> 
+                            <th> Percentile </th>
+                        </tr>
+                        <tr>
+                            <th> 5th </th>
+                            <th> 10th </th>
+                            <th> 15th </th>
+                            <th> 25th </th>
+                            <th> 50th </th>
+                            <th> 75th </th>
+                            <th> 85th </th>
+                            <th> 90th </th>
+                            <th> 95th </th>
+                        </tr>
+                        <tr>
+                            <th> Men BMI (kg/m&#178;)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> 
+                            <td> 20 years and over (total) </td>
+                            <td> 20.7 </td>
+                            <td> 22.2 </td>
+                            <td> 23.0 </td>
+                            <td> 24.6 </td>
+                            <td> 27.7 </td>
+                            <td> 31.6 </td>
+                            <td> 34.0 </td>
+                            <td> 36.1 </td>
+                            <td> 39.8 </td>
+                        </tr>
+                        <tr>
+                            <td> 20-29 years </td>
+                            <td> 19.3 </td>
+                            <td> 20.5 </td>
+                            <td> 21.2 </td>
+                            <td> 22.5 </td>
+                            <td> 25.5 </td>
+                            <td> 30.5 </td>
+                            <td> 33.1 </td>
+                            <td> 35.1 </td>
+                            <td> 39.2 </td>
+                        </tr>
+                        <tr>
+                            <td> 30-39 years  </td>
+                            <td> 21.1 </td>
+                            <td> 22.4 </td>
+                            <td> 23.3 </td>
+                            <td> 24.8 </td>
+                            <td> 27.5 </td>
+                            <td> 31.9 </td>
+                            <td> 35.1 </td>
+                            <td> 36.5 </td>
+                            <td> 40.0 </td>
+                        </tr>
+                        <tr>
+                            <td> 40-49 years  </td>
+                            <td> 21.9 </td>
+                            <td> 23.4 </td>
+                            <td> 24.3 </td>
+                            <td> 25.7 </td>
+                            <td> 28.5 </td>
+                            <td> 31.9 </td>
+                            <td> 34.4 </td>
+                            <td> 36.5 </td>
+                            <td> 40.3 </td>
+                        </tr>
+                        <tr>
+                            <td> 50-59 years  </td>
+                            <td> 21.6 </td>
+                            <td> 22.7 </td>
+                            <td> 23.6 </td>
+                            <td> 25.4 </td>
+                            <td> 28.3 </td>
+                            <td> 32.0 </td>
+                            <td> 34.0 </td>
+                            <td> 35.2 </td>
+                            <td> 40.3 </td>
+                        </tr>
+                        <tr>
+                            <td> 60-69 years  </td>
+                            <td> 21.6 </td>
+                            <td> 22.7 </td>
+                            <td> 23.6 </td>
+                            <td> 25.3 </td>
+                            <td> 28.0 </td>
+                            <td> 32.4 </td>
+                            <td> 35.3 </td>
+                            <td> 36.9 </td>
+                            <td> 41.2 </td>
+                        </tr>
+                        <tr>
+                            <td> 70-79 years  </td>\
+                            <td> 21.5 </td>
+                            <td> 23.2 </td>
+                            <td> 23.9 </td>
+                            <td> 25.4 </td>
+                            <td> 27.8 </td>
+                            <td> 30.9 </td>
+                            <td> 33.1 </td>
+                            <td> 34.9 </td>
+                            <td> 38.9 </td>
+                        </tr>
+                        <tr>
+                            <td> 80 years and over  </td>
+                            <td> 20.0 </td>
+                            <td> 21.5 </td>
+                            <td> 22.5 </td>
+                            <td> 24.1 </td>
+                            <td> 26.3 </td>
+                            <td> 29.0 </td>
+                            <td> 31.1 </td>
+                            <td> 32.3 </td>
+                            <td> 33.8 </td>
+                        </tr>
+                        <tr>
+                            <th> Age </th>
+                            <th> Women BMI (kg/m&#178;)</th>
+                        </tr>
+                        <tr> 
+                            <td> 20 years and over (total) </td>
+                            <td> 19.6 </td>
+                            <td> 21.0 </td>
+                            <td> 22.0 </td>
+                            <td> 23.6 </td>
+                            <td> 27.7 </td>
+                            <td> 33.2 </td>
+                            <td> 36.5 </td>
+                            <td> 39.3 </td>
+                            <td> 43.3 </td>
+                        </tr>
+                        <tr>
+                            <td> 20-29 years </td>
+                            <td> 18.6 </td>
+                            <td> 19.8 </td>
+                            <td> 20.7 </td>
+                            <td> 21.9 </td>
+                            <td> 25.6 </td>
+                            <td> 31.8 </td>
+                            <td> 36.0 </td>
+                            <td> 38.9 </td>
+                            <td> 42.0 </td>
+                        </tr>
+                        <tr>
+                            <td> 30-39 years  </td>
+                            <td> 19.8 </td>
+                            <td> 21.1 </td>
+                            <td> 22.0 </td>
+                            <td> 23.3 </td>
+                            <td> 27.6 </td>
+                            <td> 33.1 </td>
+                            <td> 36.6 </td>
+                            <td> 40.0 </td>
+                            <td> 44.7 </td>
+                        </tr>
+                        <tr>
+                            <td> 40-49 years  </td>
+                            <td> 20.0 </td>
+                            <td> 21.5 </td>
+                            <td> 22.5 </td>
+                            <td> 23.7 </td>
+                            <td> 28.1 </td>
+                            <td> 33.4 </td>
+                            <td> 37.0 </td>
+                            <td> 39.6 </td>
+                            <td> 44.5 </td>
+                        </tr>
+                        <tr>
+                            <td> 50-59 years  </td>
+                            <td> 19.9 </td>
+                            <td> 21.5 </td>
+                            <td> 22.2 </td>
+                            <td> 24.5 </td>
+                            <td> 28.6 </td>
+                            <td> 34.4 </td>
+                            <td> 38.3 </td>
+                            <td> 40.7 </td>
+                            <td> 45.2 </td>
+                        </tr>
+                        <tr>
+                            <td> 60-69 years  </td>
+                            <td> 20.0 </td>
+                            <td> 21.7 </td>
+                            <td> 23.0 </td>
+                            <td> 24.5 </td>
+                            <td> 28.9 </td>
+                            <td> 33.4 </td>
+                            <td> 36.1 </td>
+                            <td> 38.7 </td>
+                            <td> 41.8 </td>
+                        </tr>
+                        <tr>
+                            <td> 70-79 years  </td>
+                            <td> 20.5 </td>
+                            <td> 22.1 </td>
+                            <td> 22.9 </td>
+                            <td> 24.6 </td>
+                            <td> 28.3 </td>
+                            <td> 33.4 </td>
+                            <td> 36.5 </td>
+                            <td> 39.1 </td>
+                            <td> 42.9 </td>
+                        </tr>
+                        <tr>
+                            <td> 80 years and over  </td>
+                            <td> 19.3 </td>
+                            <td> 20.4 </td>
+                            <td> 21.3 </td>
+                            <td> 23.3 </td>
+                            <td> 26.1 </td>
+                            <td> 29.7 </td>
+                            <td> 30.9 </td>
+                            <td> 32.8 </td>
+                            <td> 35.2 </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr colspan="10"> 
+                            <th> All values displayed here were fetched from <a href="https://en.wikipedia.org/wiki/Body_mass_index"> Wikipedia. </a> </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

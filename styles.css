@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+:root{
+    --main-bg-color: #ffcdb2;
+    --main-txt-font: 'Barlow Condensed';
+    --main-txt-color: #b5838d; 
+    --highlights-color: #6d6875;
+    --extra-color:#ffb4a2;
+}
+body{
+
+}
