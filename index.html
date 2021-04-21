@@ -13,6 +13,7 @@
     <!-- Linking the required files to our page -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.png">
+    <script type="text/javascript" src="index.js"></script>
     
 </head>
 <body>
@@ -62,46 +63,7 @@
                         <input type="reset" value="Clear">
                     </div>
                 </form>
-                <div id="bmi-result"></div> <script type="text/javascript">
-                    
-                    /**
-                     * This function is very long and should be broken up into multiple pieces 
-                     * */
-                    function handleFormInputs(){
-                        // Constants 
-                        var UNDERWEIGHT =  18.5;
-                        var NORMAL = 24.9;
-                        var OVERWEIGHT = 29.9;
-                        var OBESE = 35; 
-
-                        // 
-                        var name = document.getElementById('fullname').value;
-                        var height = parseFloat(document.getElementById('height').value, 10);
-                        var weight = parseFloat(document.getElementById('weight').value, 10);
-                        var bmi = weight / Math.pow(height, 2);
-                        
-                        var bmiCondition = null;
-
-                        if (bmi < UNDERWEIGHT){
-                            bmiCondition = "Underweight";
-                        }
-                        else if (bmi > UNDERWEIGHT && bmi <= NORMAL) {
-                            bmiCondition = "Normal";
-                        }
-                        else if (bmi > NORMAL && bmi <= OVERWEIGHT){
-                            bmiCondition = "Overweight"
-                        }
-                        else if (bmi > OVERWEIGHT && bmi < OBESE) {
-                            bmiCondition = "Obese";
-                        }
-                        else{
-                            bmiCondition = "Extremely Obese"
-                        }
-
-
-                        document.getElementById("bmi-result").innerHTML += "<h4> " + name + " has a BMI of <i> " + bmi.toFixed(2) + " </i> - This is classified as " + bmiCondition + "</h4> <br>";
-                    }
-                </script></h4>
+                <div id="bmi-result"></div> 
             </section>
             <section class="table-container">
                 <h3> BMI Information </h3>
